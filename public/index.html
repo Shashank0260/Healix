@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071321">
+  <meta name="description"
+    content="Healix helps you organise health records, medicines, appointments and everyday wellbeing.">
+  <title>Healix — Your health, one step at a time</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+
+<body>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+
+  <main id="auth-view" class="auth-shell">
+    <section class="auth-brand-panel">
+      <div class="brand-lockup brand-lockup-light"><span class="brand-word">Healix</span></div>
+      <div class="auth-brand-copy">
+        <span class="eyebrow eyebrow-light">A calmer way to care</span>
+        <h1>Your health,<br><em>one step</em> at a time.</h1>
+        <p>Keep your health information organised, stay on top of reminders and make it easier to connect with care.</p>
+        <div class="trust-points">
+          <div><span>✓</span> Your information in one place</div>
+          <div><span>✓</span> Clear, friendly reminders</div>
+          <div><span>✓</span> Designed for every generation</div>
+        </div>
+      </div>
+      <div class="auth-orbit orbit-one"></div>
+      <div class="auth-orbit orbit-two"></div>
+      <p class="auth-footer-note">A demonstration environment · Not an emergency or clinical service</p>
+    </section>
+
+    <section class="auth-form-panel">
+      <div class="auth-mobile-brand brand-lockup"><span class="brand-word">Healix</span></div>
+      <div class="auth-form-wrap">
+        <div class="auth-heading">
+          <span class="eyebrow">WELCOME TO HEALIX</span>
+          <h2 id="auth-title">Welcome back</h2>
+          <p id="auth-subtitle">Sign in to continue to your health space.</p>
+        </div>
+        <form id="auth-form" class="form-stack">
+          <div id="register-name-wrap" class="field-wrap hidden"><label for="auth-name">Your name</label><input
+              id="auth-name" name="name" autocomplete="name" placeholder="e.g. Aarav Sharma"></div>
+          <div class="field-wrap"><label for="auth-email">Email address</label><input id="auth-email" name="email"
+              type="email" autocomplete="username" placeholder="you@example.com" required></div>
+          <div class="field-wrap">
+            <div class="label-row"><label for="auth-password">Password</label><button type="button" class="text-button"
+                id="toggle-password">Show</button></div><input id="auth-password" name="password" type="password"
+              autocomplete="current-password" placeholder="At least 10 characters" required minlength="10">
+          </div>
+          <p id="auth-error" class="form-error" role="alert"></p>
+          <button class="button button-primary button-full" type="submit" id="auth-submit">Sign in
+            <span>→</span></button>
+        </form>
+        <p class="auth-switch"><span id="auth-switch-copy">New to Healix?</span> <button type="button"
+            class="text-button strong" id="auth-switch">Create an account</button></p>
+        <div class="demo-login-box">
+          <div class="demo-heading"><span>✦</span><strong>Try the demo</strong><small>Sample information only</small>
+          </div>
+          <div class="demo-buttons"><button type="button" class="button button-soft" data-demo-login="patient">Patient
+              demo</button><button type="button" class="button button-outline" data-demo-login="doctor">Doctor
+              demo</button></div>
+          <p>Patient: demo@healix.health · Healix123!<br>Doctor: doctor@healix.health · Doctor123!</p>
+        </div>
+        <p class="legal-note">By continuing, you agree to use this prototype with fictional or non-sensitive test
+          information only.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-view" class="app-shell hidden">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <a class="brand-lockup" href="#overview" aria-label="Healix home"><span class="brand-word">Healix</span></a>
+
+      </div>
+      <div class="workspace-label">YOUR HEALTH SPACE</div>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-page="overview"><span
+            class="nav-icon">⌂</span><span>Overview</span></button>
+        <button class="nav-item" data-page="health"><span class="nav-icon">♡</span><span>My health</span></button>
+        <button class="nav-item" data-page="medicines"><span class="nav-icon">✚</span><span>Medicines</span><span
+            class="nav-count" id="nav-medicine-count">0</span></button>
+        <button class="nav-item" data-page="appointments"><span
+            class="nav-icon">▦</span><span>Appointments</span></button>
+        <button class="nav-item" data-page="doctors"><span class="nav-icon">⚕</span><span>Find a doctor</span></button>
+        <button class="nav-item" data-page="records"><span class="nav-icon">▤</span><span>Health records</span></button>
+        <button class="nav-item" data-page="wellness"><span class="nav-icon">◉</span><span>Wellbeing</span></button>
+        <button class="nav-item" data-page="guide"><span class="nav-icon">✧</span><span>Care Guide</span><span
+            class="nav-new">HELP</span></button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="emergency-card">
+        <div class="emergency-icon">♡</div>
+        <strong>Need urgent help?</strong>
+        <p>Healix is not an emergency service. In India, call 112 for emergency assistance.</p>
+        <a href="tel:112" class="emergency-link">Call 112 <span>↗</span></a>
+      </div>
+      <div class="sidebar-bottom"><span class="online-dot"></span><span>Demo workspace</span><span
+          class="version-label">v1.0</span></div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <div class="topbar-left"><button class="icon-button menu-toggle" id="menu-toggle" aria-label="Open navigation"
+            aria-controls="sidebar" aria-expanded="false"><span aria-hidden="true">☰</span></button>
+          <div>
+            <div class="breadcrumb-label">YOUR PERSONAL HEALTH SPACE</div>
+            <h1 id="page-title">Overview</h1>
+          </div>
+        </div>
+        <div class="topbar-actions"><button class="profile-trigger" id="profile-trigger"><span class="avatar"
+              id="top-avatar">AS</span><span class="profile-trigger-text"><strong id="top-name">Aarav
+                Sharma</strong><small id="top-role">Patient account</small></span><span
+              class="chevron">⌄</span></button>
+          <div class="profile-menu hidden" id="profile-menu"><button data-page="health">My profile</button><button
+              id="logout-button">Sign out</button></div>
+        </div>
+      </header>
+      <div class="demo-banner"><span class="demo-banner-icon">ⓘ</span><span><strong>Demo environment.</strong> Sample
+          people, providers and bookings are fictional. No real clinic receives appointment requests.</span></div>
+      <main id="page-content" class="page-content" tabindex="-1">
+        <div class="loading-state">Preparing your health space…</div>
+      </main>
+      <footer class="app-footer"><span>Healix · Made for clearer, kinder healthcare journeys</span><span>Prototype only
+          · Not medical advice</span></footer>
+    </div>
+  </div>
+
+  <div class="sidebar-scrim" id="sidebar-scrim" aria-hidden="true"></div>
+  <div id="modal-root"></div>
+</body>
+
+</html>
