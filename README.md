@@ -74,17 +74,6 @@ Healix aims to bring healthcare and intelligent technology together to create a 
 
 Our vision is to build a unified healthcare ecosystem that simplifies patient interactions and supports smarter healthcare services through technology.
 
-## 🔐 Security
-
-- Keep API keys and credentials private.
-- Never upload `.env` files to GitHub.
-- Never commit real patient records or private medical databases.
-- Configure your own environment variables before running the application.
-
-## 📄 License
-
-See the LICENSE file for licensing and usage information.
-
 ---
 
 **💙 Healix — Transforming Healthcare Through Technology.**
